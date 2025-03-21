@@ -55,12 +55,13 @@ namespace Utils
             do
             {
                 ViewUtils.PaintWrite(prompt);
-                string input = Console.ReadLine()!.Trim();
+                string input = Console.ReadLine()!;
                 if (string.IsNullOrEmpty(input))
                 {
                     ViewUtils.PaintWriteLine($"Um número não pode ser vazio.", ConsoleColor.Red);
                     continue;
                 }
+                input = input.Trim();
                 input = input.Replace(" ", "").Replace(".", "").Replace(",", ".");
                 if (!decimal.TryParse(input, CultureInfo.InvariantCulture, out decimal value))
                 {
@@ -80,12 +81,13 @@ namespace Utils
             do
             {
                 ViewUtils.PaintWrite(prompt);
-                string input = Console.ReadLine()!.Trim();
+                string input = Console.ReadLine()!;
                 if (string.IsNullOrEmpty(input))
                 {
                     ViewUtils.PaintWriteLine($"Um número não pode ser vazio...", ConsoleColor.Red);
                     continue;
                 }
+                input = input.Trim();
                 input = input.Replace(" ", "").Replace(".", "").Replace(",", ".");
                 if (!double.TryParse(input, CultureInfo.InvariantCulture, out double value))
                 {
