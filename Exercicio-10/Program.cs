@@ -34,9 +34,9 @@ namespace Exercicio_10
         {
             DateTime date = DateTime.Now;
             Console.Clear();
-            ViewUtils.PaintWriteLine("==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==", ConsoleColor.Cyan);
-            ViewUtils.PaintWriteLine($" Calculadora - Área de Terreno | {date:dd/MM/yyyy HH:mm}");
-            ViewUtils.PaintWriteLine("==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==", ConsoleColor.Cyan);
+            ViewUtils.PaintWriteLine("==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==", ConsoleColor.Cyan);
+            ViewUtils.PaintWriteLine($" Calculadora - Hotpão || {date:dd/MM/yyyy HH:mm}");
+            ViewUtils.PaintWriteLine("==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==", ConsoleColor.Cyan);
         }
         static decimal Result(decimal frenchBreadSold, decimal broaBreadSold)
         {
