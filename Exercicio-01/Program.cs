@@ -9,7 +9,8 @@ namespace Exercicio_01
         static void Main(string[] args)
         {
             decimal lenght, width, height;
-            bool onMenu = true;
+            bool onMenu;
+            bool seeCalc;
             do
             {
                 Header();
@@ -18,22 +19,16 @@ namespace Exercicio_01
                 height = Validators.DecimalVerify("Digite a altura em cm: ");
                 decimal volume = Result(lenght, width, height);
 
-                ViewUtils.PaintWrite("\nValores anotados, gostaria de ver o cálculo? (S/N) ", ConsoleColor.Yellow);
-                string option = Validators.StringVerify("Isso não é uma opção..", 1);
+                seeCalc = YesOrNo("\nValores anotados, gostaria de ver o cálculo? (S/N) ");
+                if (seeCalc == true)
+                    MathCalc(lenght, width, height, volume);
+                else
+                    ViewUtils.PaintWriteLine($"\nSendo assim, o Volume dessa caixa retangular é: {volume:F3}m³", ConsoleColor.Green);
 
-                switch (option.ToUpper())
-                {
-                    case "S":
-                        MathCalc(lenght, width, height, volume);
-                        break;
-                    case "N":
-                        ViewUtils.PaintWriteLine($"\nO volume dessa caixa retangular é: {volume.ToString("F3")}m³", ConsoleColor.Green);
-                        break;
-                }
-
-                ViewUtils.PaintWrite("\nPressione [Enter] para fazer um novo cálculo.", ConsoleColor.DarkYellow);
-                Console.ReadKey();
+                onMenu = YesOrNo("\nDeseja fazer um novo cálculo? (S/N) ");
             } while (onMenu);
+            Console.Clear();
+            ViewUtils.PaintWriteLine("Adeus (T_T)/", ConsoleColor.Magenta);
         }
         static void Header()
         {
@@ -59,7 +54,26 @@ namespace Exercicio_01
             ViewUtils.PaintWriteLine($"Volume = {lenght * width} * {height}", ConsoleColor.Yellow);
             ViewUtils.PaintWriteLine($"Volume = {lenght * width * height}", ConsoleColor.Yellow);
 
-            ViewUtils.PaintWriteLine($"\nSendo assim, o Volume dessa caixa retangular é: {volume.ToString("F3")}m³", ConsoleColor.Green);
+            ViewUtils.PaintWriteLine($"\nSendo assim, o Volume dessa caixa retangular é: {volume:F3}m³", ConsoleColor.Green);
+        }
+        static bool YesOrNo(string prompt)
+        {
+            do
+            {
+                ViewUtils.PaintWrite(prompt, ConsoleColor.Yellow);
+                string option = Validators.LetterVerify();
+                option = option.ToUpper();
+                if (option != "S" && option != "N")
+                {
+                    ViewUtils.PaintWriteLine("Opção inválida!", ConsoleColor.Red);
+                    continue;
+                }
+
+                if (option == "S")
+                    return true;
+                else
+                    return false;
+            } while (true);
         }
     }
 }
