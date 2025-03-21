@@ -86,7 +86,7 @@ namespace Utils
                     ViewUtils.PaintWriteLine($"Um número não pode ser vazio...", ConsoleColor.Red);
                     continue;
                 }
-                if (!double.TryParse(input, CultureInfo.InvariantCulture, out double value))
+                if (!double.TryParse(input, out double value))
                 {
                     ViewUtils.PaintWriteLine($"O número digitado não é valido..", ConsoleColor.Red);
                     continue;
@@ -148,4 +148,5 @@ namespace Utils
                     return false;
             } while (true);
         }
+    }
 }
