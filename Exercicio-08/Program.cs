@@ -29,9 +29,9 @@ namespace Exercicio_08
         {
             DateTime date = DateTime.Now;
             Console.Clear();
-            ViewUtils.PaintWriteLine("==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==", ConsoleColor.Cyan);
-            ViewUtils.PaintWriteLine($" Validador - Número Primo | {date:dd/MM/yyyy HH:mm}");
-            ViewUtils.PaintWriteLine("==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==", ConsoleColor.Cyan);
+            ViewUtils.PaintWriteLine("==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==", ConsoleColor.Cyan);
+            ViewUtils.PaintWriteLine($" Validador - Número Primo || {date:dd/MM/yyyy HH:mm}");
+            ViewUtils.PaintWriteLine("==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==", ConsoleColor.Cyan);
         }
         static bool NumberIsPrimeVerify(int number)
         {
