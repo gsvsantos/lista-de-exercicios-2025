@@ -55,19 +55,19 @@ namespace Utils
             do
             {
                 ViewUtils.PaintWrite(prompt);
-                string input = Console.ReadLine()!.Replace('.', ',');
+                string input = Console.ReadLine()!.Trim();
                 if (string.IsNullOrEmpty(input))
                 {
                     ViewUtils.PaintWriteLine($"Um número não pode ser vazio.", ConsoleColor.Red);
                     continue;
                 }
-                input = input.Trim();
-                if (!decimal.TryParse(input, out decimal value))
+                input = input.Replace(" ", "").Replace(".", "").Replace(",", ".");
+                if (!decimal.TryParse(input, CultureInfo.InvariantCulture, out decimal value))
                 {
                     ViewUtils.PaintWriteLine($"'{input}' não é um número valido..", ConsoleColor.Red);
                     continue;
                 }
-                if (value <= minValue || value > maxValue)
+                if (value < minValue || value > maxValue)
                 {
                     ViewUtils.PaintWriteLine($"O valor deve estar entre 1 e {maxValue:E2}.", ConsoleColor.Red);
                     continue;
@@ -80,13 +80,14 @@ namespace Utils
             do
             {
                 ViewUtils.PaintWrite(prompt);
-                string input = Console.ReadLine()!.Replace('.', ',');
+                string input = Console.ReadLine()!.Trim();
                 if (string.IsNullOrEmpty(input))
                 {
                     ViewUtils.PaintWriteLine($"Um número não pode ser vazio...", ConsoleColor.Red);
                     continue;
                 }
-                if (!double.TryParse(input, out double value))
+                input = input.Replace(" ", "").Replace(".", "").Replace(",", ".");
+                if (!double.TryParse(input, CultureInfo.InvariantCulture, out double value))
                 {
                     ViewUtils.PaintWriteLine($"O número digitado não é valido..", ConsoleColor.Red);
                     continue;
