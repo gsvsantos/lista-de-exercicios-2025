@@ -11,8 +11,8 @@ namespace Exercicio_10
             do
             {
                 Header();
-                frenchBreadSold = Validators.DecimalVerify("Quantos pães foram vendidos hoje?: ");
-                broaBreadSold = Validators.DecimalVerify("Quantas broas foram vendidas hoje?: ");
+                frenchBreadSold = Validators.DecimalVerify("Quantos pães foram vendidos hoje? ");
+                broaBreadSold = Validators.DecimalVerify("Quantas broas foram vendidas hoje? ");
                 total = Result(frenchBreadSold, broaBreadSold);
                 if(total == 0)
                 {
