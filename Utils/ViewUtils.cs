@@ -18,6 +18,10 @@
         {
             switch (type)
             {
+                case "CONTINUAR":
+                    PaintWrite("Pressione [Enter] para continuar.", ConsoleColor.Yellow);
+                    Console.ReadKey();
+                    break;
                 case "TENTAR-NOVAMENTE":
                     PaintWrite("Pressione [Enter] para tentar novamente.", ConsoleColor.Yellow);
                     Console.ReadKey();
