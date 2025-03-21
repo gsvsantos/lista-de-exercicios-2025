@@ -129,5 +129,23 @@ namespace Utils
                 return value;
             } while (true);
         }
-    }
+        public static bool YesOrNo(string prompt)
+        {
+            do
+            {
+                ViewUtils.PaintWrite(prompt, ConsoleColor.Yellow);
+                string option = Validators.LetterVerify();
+                option = option.ToUpper();
+                if (option != "S" && option != "N")
+                {
+                    ViewUtils.PaintWriteLine("Opção inválida!", ConsoleColor.Red);
+                    continue;
+                }
+
+                if (option == "S")
+                    return true;
+                else
+                    return false;
+            } while (true);
+        }
 }
