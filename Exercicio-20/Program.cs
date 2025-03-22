@@ -7,12 +7,19 @@ namespace Exercicio_20
         static void Main(string[] args)
         {
             decimal number;
-            bool onMenu;
+            bool onMenu = true;
             do
             {
                 Header();
                 number = Validators.DecimalVerify("Digite um número: ");
+                if(number >= 1 && number <= 10)
                 MultiplicationTable(number);
+                else
+                {
+                    ViewUtils.PaintWriteLine("\nEscolha um número de 1 a 10..\n", ConsoleColor.Red);
+                    ViewUtils.PressEnter("TENTAR-NOVAMENTE");
+                    continue;
+                }
                 onMenu = Validators.YesOrNo("\nDeseja ver novamente? (S/N) ");
             } while (onMenu);
             Console.Clear();
