@@ -29,13 +29,14 @@ namespace Exercicio_21
         static void FactorialCalc(int number)
         {
             int factorial = 1;
+            string sequence = $"{number}";
             Header();
             for (int i = number; i > 1; i--)
             {
                 factorial *= i;
+                sequence += $" x {i}";
             }
-
-            ViewUtils.PaintWriteLine($"O resultado de {number}! é: {factorial}");
+            ViewUtils.PaintWriteLine($"{number}! = {sequence} = {factorial.ToString("####,####,####")}");
         }
     }
 }
