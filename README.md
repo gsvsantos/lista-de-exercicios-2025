@@ -26,7 +26,13 @@ dotnet build --configuration Release
 Exercicio-01.exe
 ```
 
-### Obs:
+### Opcional
+- Executar o projeto compilando em tempo real
+```
+dotnet run --project Exercicio-01.csproj
+```
+
+#### Obs:
 Todos os exercícios seguem o mesmo padrão. Basta navegar até a pasta, compilar e executar.
 
 # Sobre o Projeto
