@@ -6,12 +6,12 @@ namespace Exercicio_16
     {
         static void Main(string[] args)
         {
-            double number;
+            int number;
             bool onMenu;
             do
             {
                 Header();
-                number = Validators.DoubleVerify("Digite um número: ");
+                number = Validators.IntVerify("Digite um número: ");
                 OddOrEven(number);
 
                 onMenu = Validators.YesOrNo("\nDeseja continuar? (S/N) ");
@@ -27,12 +27,12 @@ namespace Exercicio_16
             ViewUtils.PaintWriteLine($" Validador - Par ou Ímpar || {date:dd/MM/yyyy HH:mm}");
             ViewUtils.PaintWriteLine("==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==~~==", ConsoleColor.Cyan);
         }
-        static void OddOrEven(double number)
+        static void OddOrEven(int number)
         {
             if (number % 2 == 0)
-                ViewUtils.PaintWriteLine("É par.");
+                ViewUtils.PaintWriteLine($"\n{number} é par.", ConsoleColor.Green);
             else
-                ViewUtils.PaintWriteLine("É ímpar.");
+                ViewUtils.PaintWriteLine($"\n{number} é ímpar.", ConsoleColor.Red);
         }
     }
 }
