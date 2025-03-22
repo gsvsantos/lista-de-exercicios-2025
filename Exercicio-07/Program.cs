@@ -13,7 +13,7 @@ namespace Exercicio_07
                 Header();
                 firstTestNote = Validators.DecimalVerify("Qual a primeira nota? ");
                 firstTestWeight = Validators.DecimalVerify("Qual o peso dela? ");
-                secondTestNote = Validators.DecimalVerify("Qual a primeira nota? ");
+                secondTestNote = Validators.DecimalVerify("Qual a segunda nota? ");
                 secondTestWeight = Validators.DecimalVerify("Qual o peso dela? ");
 
                 weightedMean = Result(firstTestNote, secondTestNote, firstTestWeight, secondTestWeight);
