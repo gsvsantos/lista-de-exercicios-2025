@@ -23,7 +23,7 @@ namespace Exercicio_01
                 if (seeCalc == true)
                     MathCalc(lenght, width, height, volume);
                 else
-                    ViewUtils.PaintWriteLine($"\nO volume dessa caixa retangular é: {volume:F3}m³", ConsoleColor.Green);
+                    ViewUtils.PaintWriteLine($"\nO volume dessa caixa retangular é: {volume:F3}cm³", ConsoleColor.Green);
 
                 onMenu = Validators.YesOrNo("\nDeseja fazer um novo cálculo? (S/N) ");
             } while (onMenu);
@@ -54,7 +54,7 @@ namespace Exercicio_01
             ViewUtils.PaintWriteLine($"Volume = {lenght * width} * {height}", ConsoleColor.Yellow);
             ViewUtils.PaintWriteLine($"Volume = {lenght * width * height}", ConsoleColor.Yellow);
 
-            ViewUtils.PaintWriteLine($"\nSendo assim, o volume dessa caixa retangular é: {volume:F3}m³", ConsoleColor.Green);
+            ViewUtils.PaintWriteLine($"\nSendo assim, o volume dessa caixa retangular é: {volume:F3}cm³", ConsoleColor.Green);
         }
     }
 }
