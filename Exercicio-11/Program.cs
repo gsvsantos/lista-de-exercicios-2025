@@ -24,7 +24,7 @@ namespace Exercicio_11
                     continue;
                 }
                 else
-                    ViewUtils.PaintWriteLine($"\n{name}, você já vivode {daysLived}!!", ConsoleColor.Green);
+                    ViewUtils.PaintWriteLine($"\n{name}, você já viveu {daysLived} dias!!", ConsoleColor.Green);
 
                 onMenu = Validators.YesOrNo("\nDeseja fazer outro cálculo? (S/N) ");
             } while (onMenu);
