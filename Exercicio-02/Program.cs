@@ -22,7 +22,7 @@ namespace Exercicio_02
                 if (seeCalc == true)
                     MathCalc(PI, volume, radius, height);
                 else
-                    ViewUtils.PaintWriteLine($"\nO volume desse cilindro é: {volume:F3}m³", ConsoleColor.Green);
+                    ViewUtils.PaintWriteLine($"\nO volume desse cilindro é: {volume:F3}cm³", ConsoleColor.Green);
 
                 onMenu = Validators.YesOrNo("\nDeseja fazer um novo cálculo? (S/N) ");
             } while (onMenu);
@@ -53,7 +53,7 @@ namespace Exercicio_02
             ViewUtils.PaintWriteLine($"Volume = {PI:F4} * {Math.Pow(radius, 2)} * {height}", ConsoleColor.Yellow);
             ViewUtils.PaintWriteLine($"Volume = {(PI * Math.Pow(radius, 2) * height):F3}", ConsoleColor.Yellow);
 
-            ViewUtils.PaintWriteLine($"\nSendo assim, o volume desse cilindro é: {volume:F3}m³", ConsoleColor.Green);
+            ViewUtils.PaintWriteLine($"\nSendo assim, o volume desse cilindro é: {volume:F3}cm³", ConsoleColor.Green);
         }
     }
 }
