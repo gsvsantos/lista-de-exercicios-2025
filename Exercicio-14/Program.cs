@@ -8,15 +8,21 @@ namespace Exercicio_14
         static void Main(string[] args)
         {
             double firstNumber, secondNumber, thirdNumber;
-            bool onMenu;
+            bool onMenu = true;
             do
             {
                 Header();
                 firstNumber = Validators.DoubleVerify("Digite o valor de A: ");
                 secondNumber = Validators.DoubleVerify("Digite o valor de B: ");
                 thirdNumber = Validators.DoubleVerify("Digite o valor de C: ");
-
-                DescendingOrganizer(firstNumber, secondNumber, thirdNumber);
+                if (firstNumber != secondNumber && secondNumber != thirdNumber && thirdNumber != firstNumber)
+                    DescendingOrganizer(firstNumber, secondNumber, thirdNumber);
+                else
+                {
+                    ViewUtils.PaintWriteLine("\nOs três valores precisam ser diferentes!\n", ConsoleColor.Red);
+                    ViewUtils.PressEnter("TENTAR-NOVAMENTE");
+                    continue;
+                }
 
                 onMenu = Validators.YesOrNo("\nDeseja fazer outro cálculo? (S/N) ");
             } while (onMenu);
