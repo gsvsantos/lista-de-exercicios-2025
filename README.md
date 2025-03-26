@@ -6,6 +6,12 @@ Lista de exercícios feita com o intuito de praticar a lógica de programação 
 ## Sobre a Lista
 A lista contém diversos desafios fundamentais de programação, sendo alguns deles exercícios de calcular a Média Harmônica, outra de calcular Média Ponderada, até mesmo os exercícios clássicos como Fatorial, Fibonacci e o tão amado FizzBuzz.
 Cada exercício na lista foi criado de forma separada.  
+  
+## Requisitos
+- .NET SDK (recomendado .NET 8.0 ou superior) para compilação e execução do projeto.
+
+## Tecnologias
+[![Tecnologias](https://skillicons.dev/icons?i=git,github,visualstudio,cs,dotnet)](https://skillicons.dev)
 
 ## Como Executar os Exercícios
 1. **Clone o Repositório:**
